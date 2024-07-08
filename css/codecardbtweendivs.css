@@ -1,0 +1,101 @@
+/* Container styling to center and align cards */
+.containercard2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling for each card */
+.card2 {
+  position: relative;
+  width: 86%;
+  height: 350px;
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #170006 0%, #000000 46%, #000000 100%);
+  border-radius: 8px;
+  color: white;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+
+/* Styling for the content within each card */
+.card-content {
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+}
+
+/* Styling for titles within cards */
+.card-content .card-title {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Styling for paragraphs within cards */
+.card-content .card-para {
+  opacity: 0.8;
+  font-size: 18px;
+  max-width: 60%;
+  margin-bottom: 10px;
+}
+
+
+/* Gradient overlays for aesthetic enhancement */
+.card2:before, .card2:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.1));
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+  z-index: 1;
+}
+
+.card2:before {
+  left: 0;
+}
+
+.card2:after {
+  right: 0;
+}
+
+.card2:hover:before {
+  transform: translateX(-100%);
+}
+
+.card2:hover:after {
+  transform: translateX(100%);
+}
+
+/* Specific styles for displaying code */
+.code-example {
+  margin-top: 15px;
+  background-color: rgba(255, 255, 255, 0.2); /* Slightly opaque white for code background */
+  color: #fff; /* White text for readability */
+  padding: 10px;
+  border-radius: 5px;
+  text-align: left;
+  width: 90%;
+  overflow-x: auto; /* Adds horizontal scroll for long lines of code */
+  font-family: 'Courier New', Courier, monospace; /* Monospaced font for code */
+  word-wrap: break-word;
+  white-space: pre-wrap; /* Maintains formatting of spaces and new lines */
+}
+
+  
+  
+  
+  

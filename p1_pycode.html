@@ -11,9 +11,12 @@
     <title>Carolina Perdigão - Personal Portfolio</title>
   <!--favicon-img--> 
    <link rel="icon" type="image/png" href="images/favicon.png">
+   
    <!--favicon-img-->
    <!--main css file should not be removed -->
-    <link rel="stylesheet" href="css/index.css">
+
+   <link rel="stylesheet" href="css/index.css">
+   <link rel="stylesheet" href="css/codecardbtweendivs.css">
     <!--main css file-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
 </head>
@@ -118,13 +121,72 @@
             </div>
             </div>
 
+
+
+<!--LIST OF CODE CARDS WITH THE CODE EXAMPLES-->
+
+
+        <!--challenge 1-->
+<div class="containercard2">
+    <div class="card2">
+        <div class="card-content">
+            <p class="card-title">8 kyu: Write a function findNeedle() that takes an array full of junk but containing one "needle".</p>
+            <p class="card-para">
+                </p>
+                <p>After your function finds the needle, it should return a message (as a string) that says: "found the needle at position " plus the index it found the needle.
+                <br>
+                Example: ["hay", "junk", "hay", "hay", "moreJunk", "needle"] --> "found the needle at position 5"
+            </p>
+            <pre class="code-example">
+<code>
+def find_needle(haystack):
+    for index, item in enumerate(haystack):
+        if item == 'needle':
+            return f'found the needle at position {index}'
+</code>
+            </pre>
+        </div>
+    </div>
+</div>
+      
+        <!--challenge 2-->
+        <div class="containercard2">
+            <div class="card2">
+                <div class="card-content">
+                    <p class="card-title">7 kyu: Complementary DNA.</p>
+                    <p class="card-para">
+                        </p>
+                        <p>Deoxyribonucleic acid (DNA) is a chemical found in the nucleus of cells and carries the "instructions" for the development and functioning of living organisms.
+
+                            If you want to know more: http://en.wikipedia.org/wiki/DNA
+                            
+                            In DNA strings, symbols "A" and "T" are complements of each other, as "C" and "G". Your function receives one side of the DNA (string, except for Haskell); you need to return the other complementary side. DNA strand is never empty or there is no DNA at all (again, except for Haskell).
+                        <br>
+                        Example: "ATTGC" --> "TAACG" and "GTAT" --> "CATA"
+                    </p>
+                    <pre class="code-example">
+        <code>
+            def DNA_strand(dna):
+            replacements = {
+                'A': 'T',
+                'T': 'A',
+                'G': 'C',
+                'C': 'G'
+            }
             
-
-
-
+            return ''.join(replacements[base] for base in dna)
+        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+              
+            
 
     </div>
     <!--contact end-->
+
+    
 </div>
 <!--all the divisions-->
 <script src="js/jquery.min.js"></script>

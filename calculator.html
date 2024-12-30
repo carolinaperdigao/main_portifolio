@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Carolina's Portfolio" />
+    <meta name="keywords" content="blog, business card, creative, creative portfolio, cv theme, online resume, personal, portfolio, professional cv, responsive portfolio, resume, vcard" />
+    <meta name="author" content="Carolina Perdigão" />
+    <title>Calculator</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/stylecalculator.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+</head>
+
+
+<body>
+
+    <!--contains all the div-->
+    <div id="all">
+        <!--mouse  follower-->
+            <div class="cursor"></div>
+        <!--mouse  follower-->
+    
+        <!--link-screen-->
+            <div id="breaker">
+            </div>
+            <div id="breaker-two">
+            </div>
+        <!--link-screen-->
+            <!--Main-Section-->
+            <!--Navigator-fullscreen-->
+            <div id="navigation-content">
+                <div class="logo">
+                </div>
+                <div class="navigation-close">
+                    <span class="close-first"></span>
+                    <span class="close-second"></span>
+                </div>
+                <div class="navigation-links">
+                    <a href="index.html" data-text="HOME" id="home-link" >HOME</a>
+                    <a href="about.html" data-text="ABOUT" id="about-link" >ABOUT</a>
+                    <a href="blog.html" data-text="BLOG" id="blog-link" >BLOG</a>
+                    <a href="contact.html" data-text="CONTACT" id="contact-link" >CONTACT</a>
+                </div>
+            </div>
+            <!--Navigator-Fullscreen END-->
+
+
+    <div class="calculator">
+        <input type="text" class="calculator-screen" id="calculator-screen" disabled>
+        <div class="calculator-keys">
+            <button class="key" onclick="appendNumber('7')">7</button>
+            <button class="key" onclick="appendNumber('8')">8</button>
+            <button class="key" onclick="appendNumber('9')">9</button>
+            <button class="key operator" onclick="chooseOperation('/')">/</button>
+
+            <button class="key" onclick="appendNumber('4')">4</button>
+            <button class="key" onclick="appendNumber('5')">5</button>
+            <button class="key" onclick="appendNumber('6')">6</button>
+            <button class="key operator" onclick="chooseOperation('*')">*</button>
+
+            <button class="key" onclick="appendNumber('1')">1</button>
+            <button class="key" onclick="appendNumber('2')">2</button>
+            <button class="key" onclick="appendNumber('3')">3</button>
+            <button class="key operator" onclick="chooseOperation('-')">-</button>
+
+            <button class="key" onclick="appendNumber('0')">0</button>
+            <button class="key" onclick="appendNumber('.')">.</button>
+            <button class="key operator" onclick="chooseOperation('+')">+</button>
+            <button class="key" onclick="calculate()">=</button>
+            <button class="key" onclick="clearScreen()">C</button>
+        </div>
+    </div>
+    <script src="js/scriptcalculator.js"></script>
+</body>
+</html>
